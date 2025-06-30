@@ -11,7 +11,7 @@ from collections import defaultdict
 from datetime import datetime
 import time
 
-BEARER_TOKEN = "AAAAAAAAAAAAAAAAAAAAA..."  # Replace with your Twitter Bearer Token
+BEARER_TOKEN = "AAAAAAAAAAAAAAAAAAAAA..."
 MODEL_DIR = "distilbert_finetuned"
 DURATION = 300  # seconds to run
 MAX_STORAGE = 1000
