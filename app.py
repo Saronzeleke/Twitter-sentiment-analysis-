@@ -27,8 +27,6 @@ encoder = SentenceTransformer('all-MiniLM-L6-v2')
 index = faiss.IndexFlatL2(EMBEDDING_DIM)
 tweets_storage = []
 embeddings = []
-
-# --- Clean Tweet Function ---
 def clean_tweet(tweet):
     tweet = re.sub(r'http\S+', '', tweet)
     tweet = re.sub(r'@\w+', '', tweet)
