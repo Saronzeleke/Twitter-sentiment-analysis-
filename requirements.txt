@@ -1,0 +1,1 @@
+pip install streamlit tweepy transformers datasets sentence-transformers faiss-cpu torch numpy pandas
