@@ -62,8 +62,6 @@ def rag_sentiment(tweet):
         index.add(np.array([embedding]))
 
     return sentiment
-
-# --- Twitter Streaming Client ---
 class TweetStream(tweepy.StreamingClient):
     def __init__(self, *args, **kwargs):
         super().__init__(*args, **kwargs)
