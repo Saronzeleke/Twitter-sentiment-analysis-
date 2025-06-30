@@ -23,8 +23,6 @@ def load_model():
     return model, tokenizer
 
 model, tokenizer = load_model()
-
-# --- Initialize FAISS Index ---
 encoder = SentenceTransformer('all-MiniLM-L6-v2')
 index = faiss.IndexFlatL2(EMBEDDING_DIM)
 tweets_storage = []
