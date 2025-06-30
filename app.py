@@ -10,6 +10,7 @@ import faiss
 from collections import defaultdict
 from datetime import datetime
 import time
+import pandas as pd 
 
 BEARER_TOKEN = "AAAAAAAAAAAAAAAAAAAAA..."
 MODEL_DIR = "distilbert_finetuned"
