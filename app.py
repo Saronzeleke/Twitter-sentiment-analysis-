@@ -40,13 +40,9 @@ def get_distilbert_sentiment(text):
     logits = outputs.logits
     predicted_class = torch.argmax(logits, dim=1).item()
     return {0: 'negative', 1: 'positive'}[predicted_class]
-
-# --- RAG-based Sentiment Analyzer ---
 def rag_sentiment(tweet):
     cleaned_tweet = clean_tweet(tweet)
     embedding = encoder.encode([cleaned_tweet])[0]
-
-    # Retrieve similar past tweets
     context = ""
     if len(tweets_storage) > 0:
         D, I = index.search(np.array([embedding]), k=3)
