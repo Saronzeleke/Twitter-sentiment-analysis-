@@ -107,8 +107,6 @@ if start_button:
     stream.add_rules(tweepy.StreamRule(search_query))
 
     stream.filter(tweet_fields=["text"])
-
-# --- Display Sentiment Chart ---
 if st.session_state.sentiment_counts:
     import matplotlib.pyplot as plt
     fig, ax = plt.subplots()
@@ -117,8 +115,6 @@ if st.session_state.sentiment_counts:
     ax.bar(labels, values, color=['red', 'green', 'gray'])
     ax.set_title("Sentiment Distribution")
     st.pyplot(fig)
-
-# --- Display Tweets ---
 if st.session_state.tweet_log:
     st.subheader("Recent Tweets Analyzed")
     df = pd.DataFrame(st.session_state.tweet_log)
