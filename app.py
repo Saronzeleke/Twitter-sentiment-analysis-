@@ -50,8 +50,6 @@ def rag_sentiment(tweet):
         context = " ".join(context_tweets)
 
     sentiment = get_distilbert_sentiment(cleaned_tweet)
-
-    # Update storage and FAISS index
     tweets_storage.append(cleaned_tweet)
     embeddings.append(embedding)
     if len(tweets_storage) > MAX_STORAGE:
