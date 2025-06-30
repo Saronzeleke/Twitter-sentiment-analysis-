@@ -16,8 +16,6 @@ MODEL_DIR = "distilbert_finetuned"
 DURATION = 300
 MAX_STORAGE = 1000
 EMBEDDING_DIM = 384
-
-# --- Load Model and Tokenizer ---
 @st.cache_resource
 def load_model():
     model = AutoModelForSequenceClassification.from_pretrained(MODEL_DIR)
