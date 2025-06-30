@@ -13,7 +13,7 @@ import time
 
 BEARER_TOKEN = "AAAAAAAAAAAAAAAAAAAAA..."
 MODEL_DIR = "distilbert_finetuned"
-DURATION = 300  # seconds to run
+DURATION = 300
 MAX_STORAGE = 1000
 EMBEDDING_DIM = 384
 
