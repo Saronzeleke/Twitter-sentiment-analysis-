@@ -82,8 +82,6 @@ class TweetStream(tweepy.StreamingClient):
                 self.disconnect()
         except Exception as e:
             pass
-
-# --- Streamlit UI ---
 st.set_page_config(page_title="Live Twitter Sentiment Dashboard", layout="wide")
 st.title("🌍 Live Twitter Sentiment Analysis")
 
