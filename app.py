@@ -33,8 +33,6 @@ def clean_tweet(tweet):
     tweet = re.sub(r'#\w+', '', tweet)
     tweet = re.sub(r'[^\w\s]', '', tweet)
     return tweet.strip()
-
-# --- DistilBERT Sentiment Classifier ---
 def get_distilbert_sentiment(text):
     inputs = tokenizer(text, return_tensors='pt', truncation=True, padding=True, max_length=128)
     with torch.no_grad():
